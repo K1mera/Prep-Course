@@ -13,7 +13,7 @@ const nuevoBool = true;
 const nuevaResta = 10 - 5 === 5;
 
 // Resuelve el siguiente problema matemático:
-const nuevaMultiplicacion = 10 * 4 === 40 ;
+const nuevaMultiplicacion = 10 * 4 === 40;
 
 // Resuelve el siguiente problema matemático:
 const nuevoModulo = 21 % 5 === 1;
@@ -38,7 +38,7 @@ function suma(x, y) {
   // Tu código:
   var result = x + y;
   return result;
-  
+
 }
 
 suma(4, 6)
@@ -48,26 +48,26 @@ function resta(x, y) {
   // Tu código:
   var result = x - y;
   return result;
-  
+
 }
 
-resta(40,16)
+resta(40, 16)
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
   var result = x * y;
   return result;
-  
+
 }
 
-multiplica(3,7)
+multiplica(3, 7)
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-    var result = x / y;
-    return result;
+  var result = x / y;
+  return result;
 }
 
 divide(30, 3)
@@ -80,7 +80,7 @@ function sonIguales(x, y) {
     return true;
   }
   return false;
-  
+
 }
 
 sonIguales(8, 8)
@@ -92,7 +92,7 @@ function tienenMismaLongitud(str1, str2) {
   if (str1.length == str2.length) {
     return true;
   }
-    return false;
+  return false;
 }
 
 tienenMismaLongitud('ganar', 'perder')
@@ -128,28 +128,38 @@ function obtenerResto(x, y) {
   return left;
 }
 
-obtenerResto(27,5)
+obtenerResto(27, 5)
 
 function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-    
+  if (num % 2 === 0) {
+    return true;
   }
+  return false;
+}
+
+esPar(8)
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if (num % 2 === 1) {
+    return true;
+  }
+  return false;
 }
+
+esImpar(7)
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
   return num * num;
-  
+
 }
 
 elevarAlCuadrado(7)
@@ -158,7 +168,7 @@ function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
   return num * num * num;
-  
+
 }
 
 elevarAlCubo(5)
@@ -166,17 +176,19 @@ elevarAlCubo(5)
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-
+  return Math.pow(num, exponent)
 }
+
+elevar(5, 5)
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
   var roundNum = Math.round(num);
   return roundNum;
-  }
+}
 
-  redondearNumero(0.67)
+redondearNumero(0.67)
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
@@ -201,8 +213,18 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
+  if (numero === 0) {
+    return false;
+  }
+  else if (numero > 0) {
+    return "Es positivo";
+  }
+  else {
+    return "Es negativo";
+  }
+}
 
-   }
+esPositivo(-7)
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -243,16 +265,16 @@ function obtenerAreaRectangulo(alto, ancho) {
 
 obtenerAreaRectangulo(4, 7)
 
-function retornarPerimetro(lado){
+function retornarPerimetro(lado) {
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
   var perimeter = lado * 4;
-  return perimeter;  
+  return perimeter;
 }
 
 retornarPerimetro(7)
 
-function areaDelTriangulo(base, altura){
+function areaDelTriangulo(base, altura) {
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
   var areaTriangle = base * altura / 2;
@@ -261,7 +283,7 @@ function areaDelTriangulo(base, altura){
 
 areaDelTriangulo(4, 7)
 
-function deEuroAdolar(euro){
+function deEuroAdolar(euro) {
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
@@ -271,7 +293,7 @@ function deEuroAdolar(euro){
 
 deEuroAdolar(3)
 
-function esVocal(letra){
+function esVocal(letra) {
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
   //Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
@@ -279,27 +301,27 @@ function esVocal(letra){
   //Escribe tu código aquí
   switch (letra) {
     case letra = 'a':
-    return 'Es vocal';
-    break;
+      return 'Es vocal';
+      break;
     case letra = 'e':
-    return 'Es vocal';
-    break;
+      return 'Es vocal';
+      break;
     case letra = 'i':
-    return 'Es vocal';
-    break;
+      return 'Es vocal';
+      break;
     case letra = 'o':
-    return 'Es vocal';
-    break;
+      return 'Es vocal';
+      break;
     case letra = 'u':
-    return 'Es vocal';
-    break;
+      return 'Es vocal';
+      break;
     case letra.length > 1:
-    return 'Dato incorrecto';
-    break;
+      return 'Dato incorrecto';
+      break;
     default:
-    return 'Dato incorrecto'
-    break;
-    }
+      return 'Dato incorrecto'
+      break;
+  }
 }
 
 esVocal('a')
